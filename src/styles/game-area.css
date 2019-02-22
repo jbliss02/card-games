@@ -1,0 +1,20 @@
+#inputArea {
+    width: 100%;
+}
+
+.inputBox {
+    padding-left: 2%;
+    margin-left: 0.5%;
+}
+
+#inputBet {
+    width: 45%;
+    background-color: green;
+    float: left;
+}
+
+#inputPass {
+    width: 45%;
+    background-color: red;
+    float: left;
+}
