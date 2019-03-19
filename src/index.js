@@ -1,30 +1,31 @@
-import './styles/game-area.css';
-import './styles/cards/cards.css';
-import GameArea from './game-area';
-import $ from 'jquery';
-import Deck from 'deck-of-cards';
+// import './styles/game-area.css';
+// import './styles/cards/cards.css';
+// import GameArea from './game-area';
+//import $ from 'jquery';
+// import Deck from 'deck-of-cards';
+// import Game from './game';
 
-var deck;
+var game;
 
-$(function() {
-    var gameArea = new GameArea();
-    gameArea.SetBetClickListener($('#inputBet'));
-    gameArea.SetPassClickListener($('#inputPass'));
-    SetDeck();
-});
+function Test() { console.log('test'); }
 
-function SetDeck() {
+// $(function() {
+//     // var that = this;
 
-    deck = new Deck();
+//     // var gameArea = new GameArea();
+//     // SetDeck(that.game);
+//     // gameArea.SetBetClickListener($('#inputBet'), that.game);
+//     // gameArea.SetPassClickListener($('#inputPass'), that.game);
+//     this.game = 22;
+// });
 
-    var deckArea = $('#deck');
+function SetDeck(game) {
+
+    game = new Game(new Deck());
+    game.InitialiseDeck();
 
     var $container = document.getElementById('deck');
-    deck.mount($container);
+    game.GetDeck().mount($container);
+    
 
-    //var deck = Deck();
-    //var deck = cards.Deck();
-    //new Cards.Test;
-    //var cards = new Cards.Deck();
-    //var deck = cards.Deck();
 }

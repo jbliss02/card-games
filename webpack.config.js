@@ -1,12 +1,18 @@
 var path = require('path');
+var webpack = require('webpack');
+var CopyWebpackPlugin = require('copy-webpack-plugin');
+
+const outputFileName = '[name].bundle.js';
 
 module.exports = {
     entry: './src/index.js',
     output: {
         path: path.resolve('./build'),
-        filename: 'bundle.js'
+        filename: outputFileName,
     },
     mode: 'development',
+    devtool: 'source-map',
+    target: 'web',
     module: {
         rules: [{
                 test: /\.css$/,
@@ -27,4 +33,10 @@ module.exports = {
             }
         ]
     },
+    plugins: [
+        new CopyWebpackPlugin([
+            // { from: 'src/game.js', to: 'game.js'},
+            { from: 'src/index.js', to: 'index.js'},
+        ]),
+    ]
 };

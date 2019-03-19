@@ -13,7 +13,10 @@
 }
 
 #deck {
-    position: fixed;
+    position: relative;
+    left: 50%;
+    top: 35%;
+    /* position: fixed;
     top: calc(50% + 1.5rem);
     height: 75%;
     left: 50%;
@@ -21,7 +24,7 @@
     -moz-transform: translate3d(-50%, -50%, 0);
     -o-transform: translate3d(-50%, -50%, 0);
     -ms-transform: translate3d(-50%, -50%, 0);
-    transform: translate3d(-50%, -50%, 0);
+    transform: translate3d(-50%, -50%, 0); */
 }
 
 #container {
@@ -449,7 +452,7 @@
     background-image: url("faces/4_3.svg");
 }
 
-@media (max-width: 540px) {
+/* @media (max-width: 540px) {
     #topbar {
         text-align: left;
     }
@@ -471,4 +474,4 @@
     html {
         font-size: 125%;
     }
-}
+} */
